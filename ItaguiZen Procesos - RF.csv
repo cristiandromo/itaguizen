@@ -1,0 +1,43 @@
+,,REQUISITOS FUNCIONALES
+,,ESCENARIOS
+,RF-ESC-01,Registrar  escenarios deportivos 
+,RF-ESC-02,Leer/ver información de escenarios
+,RF-ESC-03,Actualizar/modificar la información de los escenarios 
+,RF-ESC-04,Eliminar información de los escenarios 
+,,
+,,RESERVA
+,RF-RES-01,Crear reserva de escenarios deportivos 
+,RF-RES-02,Leer/ver reserva de escenario deportivo 
+,RF-RES-03,Modificar reserva de escenario deportivo 
+,RF-RES-04,Enviar confirmar de la reserva de escenario deportivo (SMS o Email).
+,RF-RES-05,"Generar informes de reservas (periodo de tiempo, escenario, deporte)"
+,,
+,,NOVEDADES
+,RF-NOV-01,Registrar  informaciòn de novedades
+,RF-NOV-02,Leer/ver  informaciòn de novedades
+,RF-NOV-03,Actualizar/modificar informaciòn de novedades
+,RF-NOV-04,Eliminar informaciòn de novedades
+,,
+,,USUARIOS_DE_ESCENARIOS 
+,RF-USU-01,Registrar  informaciòn de usuarios
+,RF-USU-02,Leer/ver información del usuario 
+,RF-USU-03,Actualizar/modificar la informaciòn de los usuarios 
+,RF-USU-04,Eliminar información de los usuarios 
+,RF-USU-05,Designar rol a usuario 
+,,
+,,SEGURIDAD
+,RF-SEG-01,Registrar información de usuario
+,RF-SEG-02,Leer/ver información del usuario
+,RF-SEG-03,Actualizar/modificar la información del usuario
+,RF-SEG-04,Eliminar información del usuario
+,RF-SEG-05,Iniciar sesión
+,RF-SEG-06,Cerrar sesión
+,RF-SEG-07,Recuperar contraseña
+,RF-SEG-08,Generar captcha
+,RF-SEG-09,Activar 2FA
+,,
+,,AUDITORIA
+,RF-AUD-01,Generar un backup de la base de datos
+,RF-AUD-02,Reestablecer el backup de la base datos
+,RF-AUD-03,Registar actividades - log
+,RF-AUD-04,Ver registro de actividades
