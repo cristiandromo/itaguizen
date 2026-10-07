@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItaguiZen Procesos - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    ItaguiZen <span class="fw-light">Procesos</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Escenarios</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Registrar escenario <span
+                                            class="text-muted small">RF-ESC-01</span></a></li>
+                                <li><a class="dropdown-item" href="#">Ver información <span
+                                            class="text-muted small">RF-ESC-02</span></a></li>
+                                <li><a class="dropdown-item" href="#">Modificar escenario <span
+                                            class="text-muted small">RF-ESC-03</span></a></li>
+                                <li><a class="dropdown-item" href="#">Eliminar escenario <span
+                                            class="text-muted small">RF-ESC-04</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Reservas</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Crear reserva <span
+                                            class="text-muted small">RF-RES-01</span></a></li>
+                                <li><a class="dropdown-item" href="#">Ver reserva <span
+                                            class="text-muted small">RF-RES-02</span></a></li>
+                                <li><a class="dropdown-item" href="#">Modificar reserva <span
+                                            class="text-muted small">RF-RES-03</span></a></li>
+                                <li><a class="dropdown-item" href="#">Confirmar reserva <span
+                                            class="text-muted small">RF-RES-04</span></a></li>
+                                <li><a class="dropdown-item" href="#">Informes de reservas <span
+                                            class="text-muted small">RF-RES-05</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Novedades</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Registrar novedad <span
+                                            class="text-muted small">RF-NOV-01</span></a></li>
+                                <li><a class="dropdown-item" href="#">Ver novedades <span
+                                            class="text-muted small">RF-NOV-02</span></a></li>
+                                <li><a class="dropdown-item" href="#">Modificar novedad <span
+                                            class="text-muted small">RF-NOV-03</span></a></li>
+                                <li><a class="dropdown-item" href="#">Eliminar novedad <span
+                                            class="text-muted small">RF-NOV-04</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Usuarios</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Registrar usuario <span
+                                            class="text-muted small">RF-USU-01</span></a></li>
+                                <li><a class="dropdown-item" href="#">Ver usuario <span
+                                            class="text-muted small">RF-USU-02</span></a></li>
+                                <li><a class="dropdown-item" href="#">Modificar usuario <span
+                                            class="text-muted small">RF-USU-03</span></a></li>
+                                <li><a class="dropdown-item" href="#">Eliminar usuario <span
+                                            class="text-muted small">RF-USU-04</span></a></li>
+                                <li><a class="dropdown-item" href="#">Designar rol <span
+                                            class="text-muted small">RF-USU-05</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Auditoría</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Generar backup <span
+                                            class="text-muted small">RF-AUD-01</span></a></li>
+                                <li><a class="dropdown-item" href="#">Restaurar backup <span
+                                            class="text-muted small">RF-AUD-02</span></a></li>
+                                <li><a class="dropdown-item" href="#">Ver registro de logs <span
+                                            class="text-muted small">RF-AUD-04</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <button class="btn btn-info" data-bs-toggle="modal"
+                                data-bs-target="#ventanalogin">Iniciar sesión</button>
+                        </li>
+                        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                            <button class="btn btn-info" data-bs-toggle="modal"
+                                data-bs-target="#ventanaRegistrarse">Registrarse</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 mb-0">Dashboard</h1>
+                <p class="text-muted mb-0">Indicadores para la toma de decisiones</p>
+            </div>
+            <div class="mt-2 mt-sm-0">
+                <label for="periodo" class="form-label visually-hidden">Periodo</label>
+                <select class="form-select" id="periodo">
+                    <option selected>Últimos 7 días</option>
+                    <option>Últimos 30 días</option>
+                    <option>Últimos 3 meses</option>
+                    <option>Año actual</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-md-6 col-xl">
+                <div class="card kpi-card h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Ocupación global</p>
+                        <p class="kpi-valor mb-2">72%</p>
+                        <div class="progress" role="progressbar" aria-label="Ocupación global" aria-valuenow="72"
+                            aria-valuemin="0" aria-valuemax="100" style="height: 8px;">
+                            <div class="progress-bar" style="width: 72%; background-color: var(--itagui-azul);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl">
+                <div class="card kpi-card kpi-verde h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Reservas del periodo</p>
+                        <p class="kpi-valor mb-1">1.248</p>
+                        <span class="badge bg-success">+8% vs periodo anterior</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl">
+                <div class="card kpi-card kpi-rojo h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Tasa de cancelación</p>
+                        <p class="kpi-valor mb-1">6,4%</p>
+                        <span class="badge bg-danger">+1,2 pts</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl">
+                <div class="card kpi-card kpi-amarillo h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Novedades abiertas</p>
+                        <p class="kpi-valor mb-1">17</p>
+                        <span class="badge bg-warning text-dark">4 de alta prioridad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl">
+                <div class="card kpi-card kpi-cian h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Usuarios activos</p>
+                        <p class="kpi-valor mb-1">3.502</p>
+                        <span class="badge bg-info text-dark">+124 nuevos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="h5 mb-1">Demanda por franja horaria</h2>
+                <p class="text-muted small">Número de reservas por día y hora. Los colores indican mayor demanda.</p>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered text-center tabla-dashboard mb-0">
+                        <thead>
+                            <tr>
+                                <th>Día</th>
+                                <th>6-8</th>
+                                <th>8-10</th>
+                                <th>10-12</th>
+                                <th>12-14</th>
+                                <th>14-16</th>
+                                <th>16-18</th>
+                                <th>18-20</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Lunes</th>
+                                <td class="heat-1">3</td>
+                                <td class="heat-2">6</td>
+                                <td class="heat-2">7</td>
+                                <td class="heat-3">12</td>
+                                <td class="heat-3">11</td>
+                                <td class="heat-4">18</td>
+                                <td class="heat-2">8</td>
+                            </tr>
+                            <tr>
+                                <th>Martes</th>
+                                <td class="heat-1">2</td>
+                                <td class="heat-2">5</td>
+                                <td class="heat-2">7</td>
+                                <td class="heat-3">10</td>
+                                <td class="heat-3">12</td>
+                                <td class="heat-4">17</td>
+                                <td class="heat-2">7</td>
+                            </tr>
+                            <tr>
+                                <th>Miércoles</th>
+                                <td class="heat-0">1</td>
+                                <td class="heat-2">6</td>
+                                <td class="heat-2">8</td>
+                                <td class="heat-3">11</td>
+                                <td class="heat-3">13</td>
+                                <td class="heat-4">19</td>
+                                <td class="heat-2">9</td>
+                            </tr>
+                            <tr>
+                                <th>Jueves</th>
+                                <td class="heat-0">2</td>
+                                <td class="heat-2">5</td>
+                                <td class="heat-2">7</td>
+                                <td class="heat-3">12</td>
+                                <td class="heat-3">11</td>
+                                <td class="heat-4">16</td>
+                                <td class="heat-2">8</td>
+                            </tr>
+                            <tr>
+                                <th>Viernes</th>
+                                <td class="heat-1">3</td>
+                                <td class="heat-2">6</td>
+                                <td class="heat-2">8</td>
+                                <td class="heat-3">13</td>
+                                <td class="heat-4">15</td>
+                                <td class="heat-4">20</td>
+                                <td class="heat-3">10</td>
+                            </tr>
+                            <tr>
+                                <th>Sábado</th>
+                                <td class="heat-2">7</td>
+                                <td class="heat-3">11</td>
+                                <td class="heat-3">12</td>
+                                <td class="heat-2">9</td>
+                                <td class="heat-3">12</td>
+                                <td class="heat-4">17</td>
+                                <td class="heat-2">8</td>
+                            </tr>
+                            <tr>
+                                <th>Domingo</th>
+                                <td class="heat-2">6</td>
+                                <td class="heat-3">10</td>
+                                <td class="heat-3">11</td>
+                                <td class="heat-1">4</td>
+                                <td class="heat-1">5</td>
+                                <td class="heat-2">7</td>
+                                <td class="heat-0">2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex flex-wrap gap-3 mt-2 small text-muted">
+                    <span><span class="badge heat-0">&nbsp;&nbsp;</span> Baja</span>
+                    <span><span class="badge heat-1">&nbsp;&nbsp;</span> Media</span>
+                    <span><span class="badge heat-2">&nbsp;&nbsp;</span> Alta</span>
+                    <span><span class="badge heat-3">&nbsp;&nbsp;</span> Muy alta</span>
+                    <span><span class="badge heat-4">&nbsp;&nbsp;</span> Máxima</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h5 mb-3">Reservas por escenario</h2>
+                        <p class="mb-1 d-flex justify-content-between"><span>Unidad Deportiva Sur</span><strong>312</strong></p>
+                        <div class="progress mb-3" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                            style="height: 8px;">
+                            <div class="progress-bar" style="width: 100%; background-color: var(--itagui-azul);"></div>
+                        </div>
+                        <p class="mb-1 d-flex justify-content-between"><span>Estadio Metropolitano</span><strong>268</strong></p>
+                        <div class="progress mb-3" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"
+                            style="height: 8px;">
+                            <div class="progress-bar" style="width: 86%; background-color: var(--itagui-azul);"></div>
+                        </div>
+                        <p class="mb-1 d-flex justify-content-between"><span>Coliseo El Coco</span><strong>201</strong></p>
+                        <div class="progress mb-3" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"
+                            style="height: 8px;">
+                            <div class="progress-bar" style="width: 64%; background-color: var(--itagui-azul);"></div>
+                        </div>
+                        <p class="mb-1 d-flex justify-content-between"><span>Cancha La Ferrería</span><strong>143</strong></p>
+                        <div class="progress mb-3" role="progressbar" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100"
+                            style="height: 8px;">
+                            <div class="progress-bar" style="width: 46%; background-color: var(--itagui-azul);"></div>
+                        </div>
+                        <p class="mb-1 d-flex justify-content-between"><span>Pista de patinaje</span><strong>88</strong></p>
+                        <div class="progress" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"
+                            style="height: 8px;">
+                            <div class="progress-bar" style="width: 28%; background-color: var(--itagui-azul);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h5 mb-3">Confirmaciones de reserva <span class="text-muted small">(RF-RES-04)</span></h2>
+                        <p class="mb-1 d-flex justify-content-between"><span>Enviadas</span><strong>1.248</strong></p>
+                        <div class="progress mb-3" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                            style="height: 8px;">
+                            <div class="progress-bar" style="width: 100%; background-color: var(--itagui-cian);"></div>
+                        </div>
+                        <p class="mb-1 d-flex justify-content-between"><span>Confirmadas por el usuario</span><strong>1.101</strong></p>
+                        <div class="progress mb-3" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"
+                            style="height: 8px;">
+                            <div class="progress-bar" style="width: 88%; background-color: var(--itagui-verde);"></div>
+                        </div>
+                        <p class="mb-1 d-flex justify-content-between"><span>Sin respuesta</span><strong>102</strong></p>
+                        <div class="progress mb-3" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"
+                            style="height: 8px;">
+                            <div class="progress-bar" style="width: 8%; background-color: var(--itagui-amarillo);"></div>
+                        </div>
+                        <p class="mb-1 d-flex justify-content-between"><span>Fallidas</span><strong>45</strong></p>
+                        <div class="progress" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100"
+                            style="height: 8px;">
+                            <div class="progress-bar" style="width: 4%; background-color: var(--itagui-rojo);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h5 mb-3">Próximas reservas de hoy</h2>
+                        <div class="table-responsive">
+                            <table class="table table-sm tabla-dashboard mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Hora</th>
+                                        <th>Escenario</th>
+                                        <th>Usuario</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>14:00</td>
+                                        <td>Unidad Deportiva Sur</td>
+                                        <td>Fútbol - Sub 15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15:30</td>
+                                        <td>Coliseo El Coco</td>
+                                        <td>Baloncesto - Liga</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16:00</td>
+                                        <td>Cancha La Ferrería</td>
+                                        <td>J. Pérez</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18:00</td>
+                                        <td>Estadio Metropolitano</td>
+                                        <td>Atletismo - Club</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h5 mb-3">Novedades sin resolver <span class="text-muted small">(RF-NOV)</span></h2>
+                        <div class="table-responsive">
+                            <table class="table table-sm tabla-dashboard mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Escenario</th>
+                                        <th>Prioridad</th>
+                                        <th>Antigüedad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Estadio Metropolitano</td>
+                                        <td><span class="badge bg-danger">Alta</span></td>
+                                        <td>3 días</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Coliseo El Coco</td>
+                                        <td><span class="badge bg-warning text-dark">Media</span></td>
+                                        <td>5 días</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cancha La Ferrería</td>
+                                        <td><span class="badge bg-warning text-dark">Media</span></td>
+                                        <td>6 días</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pista de patinaje</td>
+                                        <td><span class="badge bg-success">Baja</span></td>
+                                        <td>9 días</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="h5 mb-3">Salud del sistema <span class="text-muted small">(RF-SEG / RF-AUD)</span></h2>
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="card kpi-card kpi-verde h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Último backup</p>
+                        <p class="kpi-valor fs-5 mb-1">Hoy, 02:00 a. m.</p>
+                        <span class="badge bg-success">Exitoso</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="card kpi-card kpi-rojo h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Intentos de login fallidos</p>
+                        <p class="kpi-valor fs-5 mb-1">37</p>
+                        <span class="badge bg-danger">Revisar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="card kpi-card kpi-cian h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Usuarios con 2FA</p>
+                        <p class="kpi-valor fs-5 mb-1">64%</p>
+                        <span class="badge bg-info text-dark">En aumento</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="card kpi-card kpi-amarillo h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Recuperaciones de contraseña</p>
+                        <p class="kpi-valor fs-5 mb-1">12</p>
+                        <span class="badge bg-warning text-dark">Últimos 7 días</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="h5 mb-3">Últimas actividades del log <span class="text-muted small">(RF-AUD-04)</span></h2>
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped tabla-dashboard mb-0">
+                        <thead>
+                            <tr>
+                                <th>Fecha y hora</th>
+                                <th>Usuario</th>
+                                <th>Acción</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2026-10-06 13:42</td>
+                                <td>admin</td>
+                                <td>Crear reserva RF-RES-01</td>
+                                <td><span class="badge bg-success">OK</span></td>
+                            </tr>
+                            <tr>
+                                <td>2026-10-06 13:15</td>
+                                <td>jperez</td>
+                                <td>Iniciar sesión RF-SEG-05</td>
+                                <td><span class="badge bg-success">OK</span></td>
+                            </tr>
+                            <tr>
+                                <td>2026-10-06 12:58</td>
+                                <td>desconocido</td>
+                                <td>Iniciar sesión RF-SEG-05</td>
+                                <td><span class="badge bg-danger">Fallido</span></td>
+                            </tr>
+                            <tr>
+                                <td>2026-10-06 12:03</td>
+                                <td>mgomez</td>
+                                <td>Modificar escenario RF-ESC-03</td>
+                                <td><span class="badge bg-success">OK</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p class="eslogan mb-1">Todos somos Itagüí</p>
+            <p class="mb-0 small">ItaguiZen Procesos - Escenarios deportivos</p>
+            <p class="mb-0 small">NIT. 890.980.093-8 &bull; PBX: 373 76 76 &bull; Cra. 51 No. 51 - 55</p>
+            <p class="mb-0 small">Centro Administrativo Municipal de Itagüí (CAMI) &bull; www.itagui.gov.co</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="ventanalogin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Iniciar sesión</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-1">
+                            <label for="loginEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="mb-2">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword">
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="login2FA">
+                            <label class="form-check-label" for="login2FA">Activar 2FA (RF-SEG-09)</label>
+                        </div>
+                        <div class="mb-0">
+                            <a href="#" class="small">Recuperar contraseña (RF-SEG-07)</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ingresar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="ventanaRegistrarse">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Registrarse</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-1">
+                            <label for="regNombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="regNombre">
+                        </div>
+                        <div class="mb-1">
+                            <label for="regEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="regEmail" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="mb-2">
+                            <label for="regEmailConfirma" class="form-label">Confirme correo electrónico</label>
+                            <input type="email" class="form-control" id="regEmailConfirma"
+                                placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="regPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="regPassword">
+                        </div>
+                        <div class="mb-4">
+                            <label for="regPasswordConfirma" class="form-label">Confirmar contraseña</label>
+                            <input type="password" class="form-control" id="regPasswordConfirma">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Registrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
