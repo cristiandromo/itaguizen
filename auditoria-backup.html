@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItaguiZen - Generar backup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    ItaguiZen
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Escenarios</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="escenarios-registrar.html">Registrar escenario <span
+                                            class="text-muted small">RF-ESC-01</span></a></li>
+                                <li><a class="dropdown-item" href="escenarios-ver.html">Ver información <span
+                                            class="text-muted small">RF-ESC-02</span></a></li>
+                                <li><a class="dropdown-item" href="escenarios-modificar.html">Modificar escenario <span
+                                            class="text-muted small">RF-ESC-03</span></a></li>
+                                <li><a class="dropdown-item" href="escenarios-eliminar.html">Eliminar escenario <span
+                                            class="text-muted small">RF-ESC-04</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Reservas</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="reservas-crear.html">Crear reserva <span
+                                            class="text-muted small">RF-RES-01</span></a></li>
+                                <li><a class="dropdown-item" href="reservas-ver.html">Ver reserva <span
+                                            class="text-muted small">RF-RES-02</span></a></li>
+                                <li><a class="dropdown-item" href="reservas-modificar.html">Modificar reserva <span
+                                            class="text-muted small">RF-RES-03</span></a></li>
+                                <li><a class="dropdown-item" href="reservas-confirmar.html">Confirmar reserva <span
+                                            class="text-muted small">RF-RES-04</span></a></li>
+                                <li><a class="dropdown-item" href="reservas-informes.html">Informes de reservas <span
+                                            class="text-muted small">RF-RES-05</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Novedades</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="novedades-registrar.html">Registrar novedad <span
+                                            class="text-muted small">RF-NOV-01</span></a></li>
+                                <li><a class="dropdown-item" href="novedades-ver.html">Ver novedades <span
+                                            class="text-muted small">RF-NOV-02</span></a></li>
+                                <li><a class="dropdown-item" href="novedades-modificar.html">Modificar novedad <span
+                                            class="text-muted small">RF-NOV-03</span></a></li>
+                                <li><a class="dropdown-item" href="novedades-eliminar.html">Eliminar novedad <span
+                                            class="text-muted small">RF-NOV-04</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Usuarios</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="usuarios-registrar.html">Registrar usuario <span
+                                            class="text-muted small">RF-USU-01</span></a></li>
+                                <li><a class="dropdown-item" href="usuarios-ver.html">Ver usuario <span
+                                            class="text-muted small">RF-USU-02</span></a></li>
+                                <li><a class="dropdown-item" href="usuarios-modificar.html">Modificar usuario <span
+                                            class="text-muted small">RF-USU-03</span></a></li>
+                                <li><a class="dropdown-item" href="usuarios-eliminar.html">Eliminar usuario <span
+                                            class="text-muted small">RF-USU-04</span></a></li>
+                                <li><a class="dropdown-item" href="usuarios-designar-rol.html">Designar rol <span
+                                            class="text-muted small">RF-USU-05</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                data-bs-toggle="dropdown">Auditoría</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="auditoria-backup.html">Generar backup <span
+                                            class="text-muted small">RF-AUD-01</span></a></li>
+                                <li><a class="dropdown-item" href="auditoria-restaurar.html">Restaurar backup <span
+                                            class="text-muted small">RF-AUD-02</span></a></li>
+                                <li><a class="dropdown-item" href="auditoria-logs.html">Ver registro de logs <span
+                                            class="text-muted small">RF-AUD-04</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <button class="btn btn-info" data-bs-toggle="modal"
+                                data-bs-target="#ventanalogin">Iniciar sesión</button>
+                        </li>
+                        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                            <button class="btn btn-info" data-bs-toggle="modal"
+                                data-bs-target="#ventanaRegistrarse">Registrarse</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item">Auditoría</li>
+                <li class="breadcrumb-item active" aria-current="page">Generar backup</li>
+            </ol>
+        </nav>
+
+        <div class="mb-4">
+            <h1 class="h3 mb-0">Generar backup</h1>
+            <p class="text-muted mb-0">RF-AUD-01 &bull; Genere una copia de seguridad de la base de datos.</p>
+        </div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="card kpi-card kpi-verde h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Último backup</p>
+                        <p class="kpi-valor fs-5 mb-1">Hoy, 02:00 a. m.</p>
+                        <span class="badge bg-success">Exitoso</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="card kpi-card h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Tamaño</p>
+                        <p class="kpi-valor fs-5 mb-1">248 MB</p>
+                        <span class="badge bg-info text-dark">Completo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="card kpi-card kpi-cian h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Copias este mes</p>
+                        <p class="kpi-valor fs-5 mb-1">28</p>
+                        <span class="badge bg-info text-dark">Diarias</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="card kpi-card kpi-amarillo h-100">
+                    <div class="card-body">
+                        <p class="kpi-label mb-1">Retención</p>
+                        <p class="kpi-valor fs-5 mb-1">30 días</p>
+                        <span class="badge bg-warning text-dark">Política</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <form>
+                    <div class="row g-3 align-items-end">
+                        <div class="col-12 col-md-4">
+                            <label for="backupTipo" class="form-label">Tipo de copia</label>
+                            <select class="form-select" id="backupTipo">
+                                <option selected>Completa</option>
+                                <option>Incremental</option>
+                                <option>Solo registros</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="backupDestino" class="form-label">Destino</label>
+                            <select class="form-select" id="backupDestino">
+                                <option selected>Servidor local</option>
+                                <option>Nube</option>
+                                <option>Unidad externa</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <button type="button" class="btn btn-success w-100" data-bs-toggle="modal"
+                                data-bs-target="#confirmarBackup">Generar backup</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="h5 mb-3">Historial de copias</h2>
+                <div class="table-responsive">
+                    <table class="table table-sm table-hover tabla-dashboard mb-0">
+                        <thead>
+                            <tr>
+                                <th>Fecha y hora</th>
+                                <th>Tipo</th>
+                                <th>Tamaño</th>
+                                <th>Responsable</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2026-10-16 02:00</td>
+                                <td>Completa</td>
+                                <td>248 MB</td>
+                                <td>sistema</td>
+                                <td><span class="badge bg-success">Exitoso</span></td>
+                            </tr>
+                            <tr>
+                                <td>2026-10-15 02:00</td>
+                                <td>Completa</td>
+                                <td>247 MB</td>
+                                <td>sistema</td>
+                                <td><span class="badge bg-success">Exitoso</span></td>
+                            </tr>
+                            <tr>
+                                <td>2026-10-14 02:00</td>
+                                <td>Incremental</td>
+                                <td>32 MB</td>
+                                <td>admin</td>
+                                <td><span class="badge bg-success">Exitoso</span></td>
+                            </tr>
+                            <tr>
+                                <td>2026-10-13 02:00</td>
+                                <td>Completa</td>
+                                <td>245 MB</td>
+                                <td>sistema</td>
+                                <td><span class="badge bg-danger">Fallido</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0 small">ItaguiZen - Escenarios deportivos</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="confirmarBackup">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirmar backup</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0">¿Desea generar la copia de seguridad de la base de datos ahora?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Generar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="ventanalogin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Iniciar sesión</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-1">
+                            <label for="loginEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="mb-2">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword">
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="login2FA">
+                            <label class="form-check-label" for="login2FA">Activar 2FA (RF-SEG-09)</label>
+                        </div>
+                        <div class="mb-0">
+                            <a href="#" class="small">Recuperar contraseña (RF-SEG-07)</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ingresar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="ventanaRegistrarse">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Registrarse</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-1">
+                            <label for="regNombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="regNombre">
+                        </div>
+                        <div class="mb-1">
+                            <label for="regEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="regEmail" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="mb-2">
+                            <label for="regEmailConfirma" class="form-label">Confirme correo electrónico</label>
+                            <input type="email" class="form-control" id="regEmailConfirma"
+                                placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="regPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="regPassword">
+                        </div>
+                        <div class="mb-4">
+                            <label for="regPasswordConfirma" class="form-label">Confirmar contraseña</label>
+                            <input type="password" class="form-control" id="regPasswordConfirma">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Registrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
